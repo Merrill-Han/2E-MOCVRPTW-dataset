@@ -1,0 +1,60 @@
+clc;
+clear;
+x = 50; % 圆心
+y = 50; % 圆心
+r2 = 20; % 第一个圆半径
+r3 = 30; % 第二个圆半径
+r4 = 40;% 第三个圆半径
+r5 = 50; % 第四个圆半径
+
+% 生成点集
+num_points = 3; % 点集的点数
+
+d2 = zeros(num_points, 2); % 初始化点集
+for i = 1:num_points
+    % 计算角度
+    theta = 2 * pi * (i - 1) / num_points;
+    % 计算每个分区的中心
+    x_center = x;
+    y_center = y;
+    % 将点随机分布在每个分区内
+    delta_theta = 2 * pi / (num_points * 2); % 分区角度
+    delta_theta
+    rand_theta = theta + rand * delta_theta; % 在当前分区内生成随机角度
+    % 计算点的位置
+    rand_r = r4 +rand * (r5 - r4);
+    x1 = x_center + rand_r * cos(rand_theta);
+    y1 = y_center + rand_r * sin(rand_theta);
+    d2(i, :) = [x1, y1];
+end
+
+% 绘制第二个圆环
+t = linspace(0, 2 * pi, 100);
+x2 = x + r2 * cos(t);
+y2 = y + r2 * sin(t);
+plot(x2, y2, 'k'); % 绘制第二个圆环
+hold on;
+
+% 绘制第三个圆环
+t = linspace(0, 2 * pi, 100);
+x3 = x + r3 * cos(t);
+y3 = y + r3 * sin(t);
+plot(x3, y3, 'k'); % 绘制第二个圆环
+hold on;
+
+% 绘制第四个圆环
+t = linspace(0, 2 * pi, 100);
+x4 = x + r4 * cos(t);
+y4 = y + r4 * sin(t);
+plot(x4, y4, 'k'); % 绘制第二个圆环
+hold on;
+
+% 绘制点集
+scatter(d2(:, 1), d2(:, 2), 100, 'r', 'filled'); % 绘制点集
+axis equal;
+xlabel('X');
+ylabel('Y');
+title('Points in the Annulus')
+
+% 保存点集到 Excel 文件
+xlswrite('data2.xls', d2);
