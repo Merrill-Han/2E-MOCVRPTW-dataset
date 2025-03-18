@@ -28,9 +28,9 @@ where:
 ### **Logistics Node Distribution Scenarios (`x, y` values)**
 | Scenario | Suppliers (`x`) | Retailers (`y`) | Description |
 |----------|--------------|----------------|-------------|
-| **E-4,3-u-n** | 4 | 3 | Supplier nodes in urban centers, retailers in commercial areas (e.g., Futian CBD) |
-| **E-4,2-u-n** | 4 | 2 | Suppliers in commercial hubs, retailers closer to customer zones |
-| **E-3,4-u-n** | 3 | 4 | Suppliers near city center, retailers spread in suburban areas |
+| **E-3,2-u-n** | 3 | 2 | Supplier nodes in urban centers, retailers in commercial areas (e.g., Futian CBD) |
+| **E-3,1-u-n** | 3 | 1 | Suppliers in commercial hubs, retailers closer to customer zones |
+| **E-2,3-u-n** | 2 | 3 | Suppliers near city center, retailers spread in suburban areas |
 
 ---
 
