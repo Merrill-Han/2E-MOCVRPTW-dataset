@@ -1,12 +1,12 @@
-# E-MOCVRPTW Simulation Dataset
+# 2E-MOCVRPTW Simulation Dataset
 
 ## **1. Overview**
-This dataset provides benchmark instances for the **Multi-Objective Capacitated Vehicle Routing Problem with Time Windows (E-MOCVRPTW)**. The instances are designed based on real-world logistics data from **Futian District, Shenzhen, China**, and simulate a **two-tier logistics network** within a **10×10 plane region**.
+This dataset provides benchmark instances for the **2E-MOCVRPTW**. The instances are designed based on real-world logistics data from **Futian District, Shenzhen, China**, and simulate a **two-echelon logistics network** within a **10×10 plane region**.
 
 The dataset consists of:
 - **Three suppliers, seven retail stores, and 140 customers.**
 - **Customer demand scenarios** categorized by spatial distribution.
-- **Two-stage problem instances** reflecting the two-tier logistics structure.
+- **Two-echelon problem instances** reflecting the two-echelon logistics structure.
 
 This dataset can be used for research in **vehicle routing optimization, last-mile delivery planning, and collaborative logistics networks**.
 
@@ -16,7 +16,7 @@ This dataset can be used for research in **vehicle routing optimization, last-mi
 Each instance follows the naming format:E-x,y-z-n
 
 where:
-- **x, y**: Represent the distribution of **first-tier nodes (suppliers) and second-tier nodes (retailers)**.
+- **x, y**: Represent the distribution of **first-echelon nodes (suppliers) and second-echelon nodes (retailers)**.
 - **z**: Represents the clustering degree of customer distribution.
 - **n**: Represents the instance number for a particular distribution pattern.
 
@@ -36,8 +36,8 @@ where:
 
 ## **3. Data Format**
 Each instance is stored as two `.txt` files:
-1. **First-stage file (`E-x,y-z-n-1st.txt`)** - Supplier to Retailer assignment.
-2. **Second-stage file (`E-x,y-z-n-2rd.txt`)** - Retailer to Customer assignment.
+1. **First-echelon file (`E-x,y-z-n-1st.txt`)** - Supplier to Retailer assignment.
+2. **Second-echelon file (`E-x,y-z-n-2rd.txt`)** - Retailer to Customer assignment.
 
 Each file consists of **9 columns**:
 
